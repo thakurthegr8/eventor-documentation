@@ -10,38 +10,83 @@ Let's discover **Eventor in less than 5 minutes**.
 
 Get started by **reading what it actually is?**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Or **try eventor immediately** with **[eventor.rtdevopsify.com](https://eventor.rtdevopsify.com)**.
 
-### What you'll need
+### What it actually is?
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+**Eventor** is an attendance tracking app that enables attendees to check in and out of an event by scanning their QR codes through event volunteers. The timestamps of check-in and out help the event manager mark the attendee present. Only the event manager is authorized to give attendance and sole purpose of QR code scanner is to check in and out member. 
 
-## Generate a new site
+## Problem
+### What problem is this solving?
 
-Generate a new Docusaurus site using the **classic template**.
+This eliminates the need of an **Attendance chaperon** and removes a lot of the other manual work that typically comes with **attendance tracking**.
 
-The classic template will automatically be added to your project after you run the command:
+# Our Approach
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+We have assigned three roles for the app namely member, verifier, and admin.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Admin Role Privileges
+1. Can create, read, update, and delete group and event, Deletion can only takes place before commencement. This preserves the attendance record being deleted accidentally. Event details include:-
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+- Date of commencement  
+- Start Time
+- End Time
+- Location
+- Title
+- Description
+- Verifier ID
+- Member ID list
 
-## Start your site
+2. Can give attendance.
 
-Run the development server:
+### Member Role Privileges
 
-```bash
-cd my-website
-npm run start
-```
+1. Can receive event invitations. Invitations may include info such as:- 
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+- Date of commencement
+- Start Time
+- End Time
+- Attendance status
+- Location
+- Checked In Timestamp
+- Checked Out Timestamp
+- Title 
+- Description
+- Also, a unique QR code is generated for each and every member based on check in and out will takes place.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+### Verifier Role Privileges
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+1. Can check in and out the member invited in the event, to mark the attendance of the members.
+2. Only a verifier’s can perform check in and out process.
+
+# System features :
+
+-  Add/Delete users to the underlying database (PostgreSQL in this case), in bulk or individually
+
+-  Generate QR-codes using the SAP-ID (as username) , and other member info
+
+-  Ability to email the QR-code to each campus member, respectively
+
+-  Ability to manage user accounts who can be students, staff, or admin
+
+-  Preferably Single sign-on for admins; password reset capability; Permissions management 
+
+-  Checking in/out using the attached camera for QR-code scan
+
+-  Show person's photo/name/identity on screen when a valid QR-code is read
+
+-  Can run on a low-cost edge device (Android mobile & Tablet, PC with i3 CPU, etc.)
+
+-  Generate reports of attendance and analytics
+
+-  Configuration to store Event/Location/Time info and ability to add rules such as onetime-checkin-only any security features, minimum-time-before-checkout, etc.
+
+### App Flow
+**[App Flow Artboard](https://whimsical.com/eventor-attendance-taking-app-A3egZwmc7AY65QLE2ecexk@2bsEvpTYFZsxPSBXTTxYy7ymEMBf3WkH7ie)**
+
+### Authorization Flow
+**[Authorization Flow Artboard](https://whimsical.com/login-flow-UWdk7aTP1HgfkYWYPqHYiZ@2Ux7TurymN4vZ4Jhft4V)**
+
+### App Architecture
+**[App Architecture Artboard](https://whimsical.com/app-architecture-6WHqQzTMFq1nZx4L4ahyFR@2Ux7TurymNHvRPXVCa9C)**
+
