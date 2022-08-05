@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 
 # Introduction
+![alt text](/img/logo.svg)
 
 Let's discover **Eventor in less than 5 minutes**.
 
@@ -21,7 +22,7 @@ Or **try eventor immediately** with **[eventor.rtdevopsify.com](https://eventor.
 
 This eliminates the need of an **Attendance chaperon** and removes a lot of the other manual work that typically comes with **attendance tracking**.
 
-# Our Approach
+## Our Approach
 
 We have assigned three roles for the app namely member, verifier, and admin.
 
@@ -88,5 +89,24 @@ We have assigned three roles for the app namely member, verifier, and admin.
 **[Authorization Flow Artboard](https://whimsical.com/login-flow-UWdk7aTP1HgfkYWYPqHYiZ@2Ux7TurymN4vZ4Jhft4V)**
 
 ### App Architecture
-**[App Architecture Artboard](https://whimsical.com/app-architecture-6WHqQzTMFq1nZx4L4ahyFR@2Ux7TurymNHvRPXVCa9C)**
+**[App Architecture Artboard](https://whimsical.com/app-architecture-6WHqQzTMFq1nZx4L4ahyFR@2Ux7TurymNHvRPXVCa9Cg)**
+
+### Database Design
+![alt text](/img/database_design.png)
+
+### Tech Stack
+
+The app is completely a server-less web app which uses :-
+
+1. PostgreSQL for database. https://www.postgresql.org/
+2. Node.js for backend. https://nodejs.org/en/
+3. Azure active directory for user authentication and other services. https://azure.microsoft.com/en-in/services/active-directory/
+4. AWS for hosting. https://aws.amazon.com/
+5. Knex.js as a query builder in backend for using database resources. http://knexjs.org/
+6. Next.js framework for User app to enable fast api calls and server-side rendering. https://nextjs.org/
+7. Tailwindcss for User app design system. https://tailwindcss.com/
+8. React.js framework for Admin app. https://reactjs.org/
+9. Ant design for Admin app design system. https://ant.design/
+10. Jenkins for automated deployment. https://www.jenkins.io/
+
 
