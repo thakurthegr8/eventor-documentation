@@ -27,7 +27,7 @@ const FeatureList = [
     Svg: require("@site/static/img/eventor_visual_data.svg").default,
     description: (
       <>
-        Eventor uses your attendance data to give you best possible analytics in the form of graphs
+        Eventor uses your attendance data to give you best possible analytics in the form of graphs.
       </>
     ),
   },

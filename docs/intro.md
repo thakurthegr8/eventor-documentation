@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Introduction
-![alt text](/img/logo.svg)
+![alt text](/img/logo.png)
 
 Let's discover **Eventor in less than 5 minutes**.
 
